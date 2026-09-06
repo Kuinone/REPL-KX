@@ -4,7 +4,9 @@ import SongScreen from '@/components/editor/SongScreen';
 // song id is read from the URL on the client (local-first app), so a single
 // placeholder is enough to emit the route at build time.
 export function generateStaticParams() {
-  return [{ id: "new" }];
+  // "new" is the create-new-song route; "_" is the SPA-fallback placeholder that
+  // Cloudflare's _redirects sends every other /song/* to (see public/_redirects).
+  return [{ id: "new" }, { id: "_" }];
 }
 
 export default function SongPage() {
