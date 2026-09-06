@@ -25,7 +25,7 @@ export default function MasterScope() {
     ctx.scale(dpr, dpr);
 
     let frame = 0;
-    const accent = getComputedStyle(canvas).getPropertyValue('--acid').trim() || '#c5f74f';
+    const accent = getComputedStyle(canvas).getPropertyValue('--acid').trim() || '#4da3ff';
 
     const draw = () => {
       frame = requestAnimationFrame(draw);

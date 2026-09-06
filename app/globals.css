@@ -1,22 +1,22 @@
 @import 'tailwindcss';
 
 :root {
-  /* hardware-sequencer-meets-terminal palette */
-  --background: #0a0c09;
-  --surface: #10130d;
-  --surface-2: #161a11;
-  --line: #242b1c;
-  --line-bright: #36402a;
-  --text: #d8e3ca;
-  --text-dim: #7d8a6e;
-  --text-faint: #4d5742;
-  --acid: #c5f74f;
-  --acid-dim: #8fb838;
-  --acid-deep: #3c4d14;
-  --ember: #ff7847;
-  --ember-dim: #b34a26;
-  --glow: rgba(197, 247, 79, 0.35);
-  --ember-glow: rgba(255, 120, 71, 0.4);
+  /* deep-black / electric-blue / white palette */
+  --background: #05070d;
+  --surface: #0a0e17;
+  --surface-2: #10151f;
+  --line: #1a2233;
+  --line-bright: #2a3850;
+  --text: #e8eef7;
+  --text-dim: #8fa0b8;
+  --text-faint: #55647d;
+  --acid: #4da3ff;
+  --acid-dim: #3a6ea8;
+  --acid-deep: #12233d;
+  --ember: #4dd9ff;
+  --ember-dim: #2a8fb8;
+  --glow: rgba(77, 163, 255, 0.35);
+  --ember-glow: rgba(77, 217, 255, 0.4);
 }
 
 @theme inline {
@@ -46,10 +46,10 @@ body {
   background: var(--background);
   color: var(--text);
   font-family: var(--font-plex-mono), ui-monospace, monospace;
-  /* faint phosphor wash + ember vignette */
+  /* faint phosphor wash + blue vignette */
   background-image:
-    radial-gradient(ellipse 120% 70% at 50% -10%, rgba(197, 247, 79, 0.045), transparent 60%),
-    radial-gradient(ellipse 100% 80% at 80% 110%, rgba(255, 120, 71, 0.03), transparent 55%);
+    radial-gradient(ellipse 120% 70% at 50% -10%, rgba(77, 163, 255, 0.05), transparent 60%),
+    radial-gradient(ellipse 100% 80% at 80% 110%, rgba(77, 217, 255, 0.04), transparent 55%);
   background-attachment: fixed;
 }
 
@@ -86,7 +86,7 @@ body {
   color: var(--acid-dim);
 }
 .strudel-editor-root .cm-activeLine {
-  background: rgba(197, 247, 79, 0.04);
+  background: rgba(77, 163, 255, 0.06);
 }
 .strudel-editor-root .cm-cursor {
   border-left-color: var(--acid);

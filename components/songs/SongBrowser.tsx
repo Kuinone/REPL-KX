@@ -33,7 +33,7 @@ export default function SongBrowser() {
     <div className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col gap-8 px-6 py-14">
       <header className="flex items-end justify-between">
         <div>
-          <h1 className="font-display text-3xl font-black tracking-[0.3em] text-acid">PLAYER</h1>
+          <h1 className="font-display text-3xl font-black tracking-[0.3em] text-acid">OSZILLO</h1>
           <p className="mt-2 text-xs text-text-dim">build songs with strudel code + visual editors</p>
         </div>
         <div className="flex gap-2">

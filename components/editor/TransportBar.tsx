@@ -75,7 +75,7 @@ export default function TransportBar({ title, onTitleChange, onShare, onExport, 
     <header className="flex items-center gap-4 border-b border-line bg-surface px-4 py-2.5">
       <Link href="/" title="all songs">
         <h1 className="font-display text-sm font-black tracking-[0.25em] text-acid select-none transition-[text-shadow] hover:[text-shadow:0_0_12px_var(--glow)]">
-          PLAYER
+          OSZILLO
         </h1>
       </Link>
 

@@ -15,7 +15,7 @@ const unbounded = Unbounded({
 });
 
 export const metadata: Metadata = {
-  title: 'PLAYER — strudel song builder',
+  title: 'OSZILLO — strudel song builder',
   description: 'Build songs with Strudel code and visual editors',
 };
 
