@@ -1,6 +1,12 @@
-import EditorScreenLoader from '@/components/editor/EditorScreenLoader';
+import SongScreen from '@/components/editor/SongScreen';
 
-export default async function SongPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
-  return <EditorScreenLoader songId={id} />;
+// Static export requires a fixed set of params for dynamic routes. The real
+// song id is read from the URL on the client (local-first app), so a single
+// placeholder is enough to emit the route at build time.
+export function generateStaticParams() {
+  return [{ id: "new" }];
+}
+
+export default function SongPage() {
+  return <SongScreen />;
 }
