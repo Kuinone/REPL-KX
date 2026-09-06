@@ -45,7 +45,7 @@ export default function SongBrowser() {
             import
           </button>
           <Link
-            href="/song#new"
+            href="/song?id=new"
             className="flex h-9 items-center rounded-sm border border-acid-dim bg-surface-2 px-4 text-xs text-acid transition-shadow hover:shadow-[0_0_14px_var(--glow)]"
           >
             + new song
@@ -59,7 +59,7 @@ export default function SongBrowser() {
               const file = e.target.files?.[0];
               if (!file) return;
               const song = await importSongFile(file);
-              router.push(`/song#${song.id}`);
+              router.push(`/song?id=${song.id}`);
             }}
           />
         </div>
@@ -75,7 +75,7 @@ export default function SongBrowser() {
       ) : songs.length === 0 ? (
         <p className="text-sm text-text-faint">
           no songs yet — start a{' '}
-          <Link href="/song#new" className="text-acid-dim underline underline-offset-4 hover:text-acid">
+          <Link href="/song?id=new" className="text-acid-dim underline underline-offset-4 hover:text-acid">
             new one
           </Link>
         </p>
@@ -86,7 +86,7 @@ export default function SongBrowser() {
               key={song.id}
               className="group flex items-center gap-4 rounded-sm border border-line bg-surface px-4 py-3 transition-colors hover:border-line-bright"
             >
-              <Link href={`/song#${song.id}`} className="flex min-w-0 flex-1 items-baseline gap-3">
+              <Link href={`/song?id=${song.id}`} className="flex min-w-0 flex-1 items-baseline gap-3">
                 <span className="truncate text-sm text-text group-hover:text-acid">{song.title}</span>
                 <span className="shrink-0 text-xs text-text-faint">{formatWhen(song.updatedAt)}</span>
               </Link>

@@ -19,7 +19,7 @@ export default function SharePage() {
       }
       const song = createSong({ title: decoded.title, code: decoded.code });
       await saveSong(song);
-      router.replace(`/song#${song.id}`);
+      router.replace(`/song?id=${song.id}`);
     })();
   }, [router]);
 

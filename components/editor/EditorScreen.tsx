@@ -27,7 +27,7 @@ export default function EditorScreen({ songId }: { songId: string }) {
       if (songId === 'new') {
         const fresh = createSong({ code: STARTER_CODE });
         await saveSong(fresh);
-        router.replace(`/song#${fresh.id}`);
+        router.replace(`/song?id=${fresh.id}`);
         return;
       }
       const loaded = await getSong(songId);
